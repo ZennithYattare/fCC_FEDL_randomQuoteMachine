@@ -81,9 +81,11 @@ function App() {
 	};
 
 	return (
-		<div className={`App ${backgroundColor} flex h-screen w-screen`}>
+		<div
+			className={`App ${backgroundColor} flex h-screen w-screen transition-colors`}
+		>
 			<div
-				className={`${color} my-auto mx-8 max-w-lg rounded border-4 border-indigo-500/50 bg-slate-100 p-8 text-center shadow-2xl sm:mx-auto`}
+				className={`${color} my-auto mx-8 max-w-lg rounded border-4 border-indigo-500/50 bg-slate-100 p-8 text-center shadow-2xl transition-colors sm:mx-auto`}
 				id="quote-box"
 			>
 				<i class="fa-2xl fa-solid fa-quote-left mr-2"></i>
@@ -94,7 +96,7 @@ function App() {
 					- {randomQuote.author}
 				</span>
 				<a
-					className={`${backgroundColor} float-left mt-6 rounded py-2 px-3 text-slate-50 hover:contrast-150`}
+					className={`${backgroundColor} float-left mt-6 rounded py-2 px-3 text-slate-50 transition-colors hover:contrast-150`}
 					id="tweet-quote"
 					target="_blank"
 					href={
@@ -112,7 +114,7 @@ function App() {
 					<i class="fa-lg fa-brands fa-twitter"></i>
 				</a>
 				<button
-					className={`${backgroundColor} float-right mt-6 rounded py-2 px-3 text-slate-50 hover:contrast-150`}
+					className={`${backgroundColor} float-right mt-6 rounded py-2 px-3 text-slate-50 transition-colors hover:contrast-150`}
 					id="new-quote"
 					onClick={getNewQuote}
 				>
